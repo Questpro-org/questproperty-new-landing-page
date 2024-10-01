@@ -65,7 +65,7 @@ function Navbar() {
 
       {isMenuOpen && (
         <div className="md:relative md:max-w-[100%] md:[600px] ml-auto inset-0 z-50 justify-center">
-          <div className="relative top-[290px] z-50 md:top-[75px] md:w-full left-1/2 w-[100%] md:bg-[#F8F8F8] transform -translate-x-1/2 -translate-y-1/2 pt-8 rounded-md">
+          <div className="relative top-[263px] z-50 md:top-[75px] md:w-full left-1/2 w-[100%] bg-[#F8F8F8] transform -translate-x-1/2 -translate-y-1/2 pt-8 rounded-md">
             <ul className="flex flex-col gap-3  leading-[60px] text-[20px] px-7 md:text-[26px] h-[450px] text-left text-[#040821] font-semibold">
               {routes.map((route) => (
                 <li

@@ -127,6 +127,32 @@ const Icon = ({ name, className }) => {
         </svg>
       );
 
+    case "searchicon":
+      return (
+        <svg
+          className={className}
+          width="24"
+          height="23"
+          viewBox="0 0 24 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.0578 18.4606C15.967 18.4606 19.9467 14.7758 19.9467 10.2303C19.9467 5.68484 15.967 2 11.0578 2C6.14864 2 2.16895 5.68484 2.16895 10.2303C2.16895 14.7758 6.14864 18.4606 11.0578 18.4606Z"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M22.1693 20.5182L17.3359 16.043"
+            stroke="white"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      );
     default:
       return null;
   }
