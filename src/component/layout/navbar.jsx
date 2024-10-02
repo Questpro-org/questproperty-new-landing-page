@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import Icon from "../../assets/icon";
@@ -7,7 +7,23 @@ import Logo from "../../assets/images/questlogo.svg";
 function Navbar() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const iconName = isMenuOpen ? "menucloseicon" : "menuopenicon";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,13 +37,18 @@ function Navbar() {
   const routes = [
     { path: "/", label: "Home" },
     { path: "/about", label: "About Us" },
-    { path: "/contact", label: "Conatct" },
+    { path: "/contact", label: "Contact" },
     { path: "/faqs", label: "FAQs" },
   ];
 
   return (
-    <div className="relative bg-[#fff] h-[88.5px] shadow-md shadow-[#DCDEE1]">
-      <div className="max-w-screen-xl mx-auto md:py-6 py-3 md:px-14 px-4 relative z-50">
+    <div className={classNames(
+      "fixed top-0 left-0 right-0 bg-[#fff] h-[88.5px] shadow-md shadow-[#DCDEE180] transition-all duration-300 z-50",
+      {
+        "b bg-opacity-70": scrolled
+      }
+    )}>
+      <div className="max-w-screen-xl mx-auto md:py-6 py-3 md:px-14 px-4 relative">
         <div className="flex justify-between items-center cursor-pointer">
           <Link to="/" className="w-[300px] md:w-[180px] h-[10px] md:h-[15px]">
             <img src={Logo} alt="logo" />

@@ -153,6 +153,7 @@ const Icon = ({ name, className }) => {
           />
         </svg>
       );
+
     default:
       return null;
   }

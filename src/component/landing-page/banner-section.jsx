@@ -43,7 +43,7 @@ function BannerSection() {
 
   return (
     <div
-      className="relative h-screen bg-cover bg-center transition-all duration-500 ease-in-out border-0 rounded-br-[100px]"
+      className="relative lg:h-[120vh] h-screen bg-cover bg-center transition-all duration-500 ease-in-out border-0 rounded-br-[100px]"
       style={{ backgroundImage: `url(${image})` }}
     >
       {/* Content */}
