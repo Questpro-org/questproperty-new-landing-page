@@ -60,8 +60,7 @@ function BannerSection() {
             "Explore a wide range of properties, expert insights, and seamless
             experiences tailored to meet your real estate needs."
           </p>
-
-          {/* Dynamic Options (Buy, Rent, Shortlet) */}
+          
           <div className="flex gap-8 mb-6 border-b-[1px] w-[300px]">
             {options.map((option, index) => (
               <button
@@ -109,7 +108,7 @@ function BannerSection() {
                 className="lg:inline-block hidden px-4 py-2 rounded-lg text-[#666668] border-gray-300 bg-transparent outline-none border-none "
               />
             </div>
-            <button className="flex items-center justify-center bg-[#03B4FF] text-white lg:h-[60px] lg:w-[60px] h-[30px] w-[30px] rounded-lg lg:rounded-2xl">
+            <button className="bg-[#03B4FF] text-white lg:w-[80px] h-[30px] w-[30px] rounded-lg lg:rounded-lg">
               <Icon name="searchicon" />
             </button>
           </div>

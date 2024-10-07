@@ -133,6 +133,12 @@ function KeyFeatures() {
         alt={"Rivers"}
         className="mt-5 px-6 lg:hidden  hover:opacity-40 cursor-pointer"
       />
+
+      <div className="flex justify-center">
+        <button className="w-[142px] h-[46px] bg-[#03B4FF] text-white hover:opacity-50 rounded-lg mt-10">
+          View All
+        </button>
+      </div>
     </>
   );
 }

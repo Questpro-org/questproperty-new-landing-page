@@ -1,13 +1,15 @@
-import './App.css';
-import Navbar from './component/layout/navbar';
-import LandingPage from './pages/landing-page/landing-page';
+import "./App.css";
+import Footer from "./component/layout/footer";
+import Navbar from "./component/layout/navbar";
+import Routes from "./routes";
 
 function App() {
   return (
-   <>
-   <Navbar />
-   <LandingPage />
-   </>
+    <>
+      <Navbar />
+      <Routes />
+      <Footer />
+    </>
   );
 }
 

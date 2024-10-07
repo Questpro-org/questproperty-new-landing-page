@@ -81,7 +81,7 @@ function PremierEstate() {
         </div>
       </div>
 
-      <div className="bg-[#EAE6E6] lg:flex gap-8 h-[156px] lg:pt-16 pt-8 px-8 lg:px-16">
+      <div className="bg-[#EAE6E6] lg:flex gap-8 h-[156px] lg:pt-16 pt-8 lg:px-16">
         <span className="text-[28px] hidden lg:inline-block text-[#666668] ">
           Trusted by 100+ Businesses
         </span>
@@ -115,10 +115,10 @@ function PremierEstate() {
           className="w-[126px] hidden lg:inline-block h-[36px]"
         />
 
-        <div className="lg:hidden flex gap-12 mt-2">
-          <img src={Pawn} alt="pawn" className="w-[80px] h-[24px]" />
-          <img src={Pawn} alt="pawn" className="w-[80px] h-[24px]" />
-          <img src={Pawn} alt="pawn" className="w-[80px] h-[24px]" />
+        <div className="lg:hidden w-[100%] flex justify-center gap-10 mt-2">
+          <img src={Pawn} alt="pawn" className=" h-[24px]" />
+          <img src={Pawn} alt="pawn" className="h-[24px]" />
+          <img src={Pawn} alt="pawn" className=" h-[24px]" />
         </div>
       </div>
     </>

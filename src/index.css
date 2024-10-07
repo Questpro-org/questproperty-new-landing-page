@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "omnes";
+  src: url("./fonts/omnes/Omnes Bold.woff") format("woff"),
+    url("./fonts/omnes/Omnes Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neue";
+  src: url("./fonts/neue/NeueHaasUnicaPro-Regular.ttf") format("woff"),
+    url("./fonts/neue/NeueHaasUnicaPro-Medium.ttf") format("woff"),
+    url("./fonts/neue/NeueHaasUnicaPro-Light.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -15,4 +32,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-family: "omnes";
+}
+
+p, span, ul, li {
+  font-family: "neue";
 }
