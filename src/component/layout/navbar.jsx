@@ -36,7 +36,7 @@ function Navbar() {
 
   const routes = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About Us" },
+    { path: "/about-us", label: "About Us" },
     { path: "/contact", label: "Contact" },
     { path: "/faqs", label: "FAQs" },
   ];

@@ -82,7 +82,7 @@ function PremierEstate() {
       </div>
 
       <div className="bg-[#EAE6E6] lg:flex gap-8 h-[156px] lg:pt-16 pt-8 lg:px-16">
-        <span className="text-[28px] hidden lg:inline-block text-[#666668] ">
+        <span className="text-[24px] hidden lg:inline-block text-[#666668] ">
           Trusted by 100+ Businesses
         </span>
 

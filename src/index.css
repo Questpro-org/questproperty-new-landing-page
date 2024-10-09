@@ -13,8 +13,17 @@
 @font-face {
   font-family: "neue";
   src: url("./fonts/neue/NeueHaasUnicaPro-Regular.ttf") format("woff"),
-    url("./fonts/neue/NeueHaasUnicaPro-Medium.ttf") format("woff"),
-    url("./fonts/neue/NeueHaasUnicaPro-Light.ttf") format("woff");
+    url("./fonts/neue/NeueHaasUnicaPro-Light.ttf") format("woff"),
+
+    url("./fonts/neue/NeueHaasUnicaPro-Medium.ttf") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neu";
+  src: url("./fonts/neue/NeueHaasUnicaPro-Medium.ttf") format("woff"),
+    url("./fonts/neue/NeueHaasUnicaPro-Regular.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +35,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F9FAFB;
+  background-color: #F2F4F7;
 }
 
 code {
@@ -38,6 +47,10 @@ h1, h2, h3, h4, h5, h6, button {
   font-family: "omnes";
 }
 
-p, span, ul, li {
+p, span {
   font-family: "neue";
+}
+
+ul, li {
+  font-family: "neu";
 }
