@@ -37,8 +37,8 @@ function Navbar() {
   const routes = [
     { path: "/", label: "Home" },
     { path: "/about-us", label: "About Us" },
-    { path: "/contact", label: "Contact" },
-    { path: "/faqs", label: "FAQs" },
+    { path: "#/contact", label: "Contact" },
+    { path: "#/faqs", label: "FAQs" },
   ];
 
   return (
