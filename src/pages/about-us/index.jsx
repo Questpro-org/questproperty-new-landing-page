@@ -2,7 +2,6 @@ import React from "react";
 import AboutQuestPro from "../../component/about-us/about-questpro";
 import OurStory from "../../component/about-us/our-story";
 import Mission from "../../component/about-us/mission";
-import Team from "../../component/about-us/team";
 
 function AboutUs() {
   return (
@@ -10,7 +9,7 @@ function AboutUs() {
       <AboutQuestPro />
       <OurStory />
       <Mission />
-      <Team />
+      {/* <Team /> */}
     </div>
   );
 }
