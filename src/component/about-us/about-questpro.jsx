@@ -1,7 +1,7 @@
 import React from "react";
 import BgImage from "../../assets//images/Bitmap.svg";
-import AboutUs from "../../assets/images/about-us.svg";
-import AboutUsMobile from "../../assets/images/about-us-mobile.svg";
+import AboutUs from "../../assets/images/about-us.png";
+import AboutUsMobile from "../../assets/images/about-us-mobile.png";
 
 function AboutQuestPro() {
   return (

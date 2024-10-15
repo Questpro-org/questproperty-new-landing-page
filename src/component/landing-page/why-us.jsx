@@ -3,7 +3,7 @@ import Agent1 from "../../assets/images/agent1.svg";
 import Agent2 from "../../assets/images/agent2.svg";
 import Agent3 from "../../assets/images/agent3.svg";
 import BarCode from "../../assets/images/barcode.svg";
-import Flat from "../../assets/images/flat.svg";
+import Flat from "../../assets/images/flat.png";
 import Icon from "../../assets/icon";
 
 const testimonials = [

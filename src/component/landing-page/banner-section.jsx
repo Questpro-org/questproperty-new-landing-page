@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
-import Banner1 from "../../assets/images/banner1.svg";
-import Banner2 from "../../assets/images/banner2.svg";
-import Banner3 from "../../assets/images/banner3.svg";
+import Banner1 from "../../assets/images/banner1.png";
+import Banner2 from "../../assets/images/banner2.png";
+import Banner3 from "../../assets/images/banner3.png";
 import Icon from "../../assets/icon";
 
 const bannerData = [
   {
-    image: Banner2,
+    image: Banner1,
     text: " Your Ultimate Destination For",
     highlightedText: " Real Estate Excellence",
     activeOptionIndex: 0,
   },
   {
-    image: Banner3,
+    image: Banner2,
     text: "Your Ideal Shortlet Solution",
     highlightedText1: "Short Term Luxury: ",
     activeOptionIndex: 1,
   },
   {
-    image: Banner1,
+    image: Banner3,
     text: " Tailored To Your Lifestyle",
     highlightedText1: " Discover Rental Options",
     activeOptionIndex: 2,

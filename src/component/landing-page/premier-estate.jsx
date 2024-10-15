@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Pool from "../../assets/images/pool.svg";
-import Restplace from "../../assets/images/restplace.svg";
-import Parlour from "../../assets/images/parlour.svg";
+import Pool from "../../assets/images/pool.png";
+import Restplace from "../../assets/images/restplace.png";
+import Parlour from "../../assets/images/parlour.png";
 import Pawn from "../../assets/images/pawn.svg";
+import Partner2 from "../../assets/images/partner2.png";
+import Partner3 from "../../assets/images/partner3.webp";
 
 function PremierEstate() {
   const [showMore, setShowMore] = useState(false);
@@ -86,7 +88,7 @@ function PremierEstate() {
           Trusted by 100+ Businesses
         </span>
 
-        <p className="text-[18px] lg:text-left text-center font-medium lg:hidden text-[#666668] ">
+        <p className="text-[28px] lg:text-left text-center font-medium lg:hidden text-[#666668] ">
           Trusted by 100+ Businesses
         </p>
         <img
@@ -95,30 +97,20 @@ function PremierEstate() {
           className="w-[126px] hidden lg:inline-block h-[36px]"
         />
         <img
-          src={Pawn}
+          src={Partner2}
           alt="pawn"
           className="w-[126px] hidden lg:inline-block h-[36px]"
         />
         <img
-          src={Pawn}
-          alt="pawn"
-          className="w-[126px] hidden lg:inline-block h-[36px]"
-        />
-        <img
-          src={Pawn}
-          alt="pawn"
-          className="w-[126px] hidden lg:inline-block h-[36px]"
-        />
-        <img
-          src={Pawn}
+          src={Partner3}
           alt="pawn"
           className="w-[126px] hidden lg:inline-block h-[36px]"
         />
 
         <div className="lg:hidden w-[100%] flex justify-center gap-10 mt-2">
           <img src={Pawn} alt="pawn" className=" h-[24px]" />
-          <img src={Pawn} alt="pawn" className="h-[24px]" />
-          <img src={Pawn} alt="pawn" className=" h-[24px]" />
+          <img src={Partner2} alt="pawn" className="h-[24px]" />
+          <img src={Partner3} alt="pawn" className=" h-[24px]" />
         </div>
       </div>
     </>
