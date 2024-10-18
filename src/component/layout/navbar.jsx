@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import Icon from "../../assets/icon";
 import Logo from "../../assets/images/questlogo.svg";
 
-function Navbar() {
+function Navbar({ footerRef }) {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -18,10 +18,10 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
 
@@ -34,20 +34,26 @@ function Navbar() {
     }
   };
 
+  const scrollToFooter = (e) => {
+    e.preventDefault();
+    footerRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const routes = [
     { path: "/", label: "Home" },
     { path: "/about-us", label: "About Us" },
-    { path: "#/contact", label: "Contact" },
     { path: "/faqs", label: "FAQs" },
   ];
 
   return (
-    <div className={classNames(
-      "fixed top-0 left-0 right-0 bg-[#fff] h-[88.5px] shadow-md shadow-[#DCDEE180] transition-all duration-300 z-50",
-      {
-        "b bg-opacity-70": scrolled
-      }
-    )}>
+    <div
+      className={classNames(
+        "fixed top-0 left-0 right-0 bg-[#fff] h-[88.5px] shadow-md shadow-[#DCDEE180] transition-all duration-300 z-50",
+        {
+          "b bg-opacity-70": scrolled,
+        }
+      )}
+    >
       <div className="max-w-screen-xl mx-auto md:py-6 py-3 md:px-14 px-4 relative">
         <div className="flex justify-between items-center cursor-pointer">
           <Link to="/" className="w-[300px] md:w-[180px] h-[10px] md:h-[15px]">
@@ -70,6 +76,13 @@ function Navbar() {
                 <button>{route.label}</button>
               </Link>
             ))}
+
+            <button
+              onClick={scrollToFooter}
+              className="text-[14px] font-bold gap-9 px-2 py-1 hidden md:block w-fit text-[#000] rounded-2xl"
+            >
+              Contact
+            </button>
           </div>
 
           <Link to="/signup" className="hidden md:block">
@@ -102,6 +115,9 @@ function Navbar() {
                   <Link to={route.path}>{route.label}</Link>
                 </li>
               ))}
+              <li className="font-semibold">
+                <button onClick={scrollToFooter}>Contact</button>
+              </li>
             </ul>
           </div>
 

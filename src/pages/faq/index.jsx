@@ -74,7 +74,7 @@ function FaqQuestions() {
   };
 
   return (
-    <section className="mt-36">
+    <section className="mt-36 max-w-screen-xl mx-auto">
       {questions.map((question) => (
         <div
           key={question.id}
