@@ -131,7 +131,7 @@ const Footer = () => {
               </li>
               <li className="flex gap-3">
                 {" "}
-                <Icon name="supporticon" /> Support@questpro.ng
+                <Icon name="supporticon" /> hello@questpro.ng
               </li>
             </ul>
           </div>

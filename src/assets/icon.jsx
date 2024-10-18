@@ -416,7 +416,7 @@ const Icon = ({ name, className }) => {
     case "homeicon":
       return (
         <svg
-        className={className}
+          className={className}
           width="64"
           height="64"
           viewBox="0 0 64 64"
@@ -466,8 +466,35 @@ const Icon = ({ name, className }) => {
           </defs>
         </svg>
       );
-  
-      default:
+
+    case "plusicon":
+      return (
+        <svg
+          className={className}
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 20H30"
+            stroke="#5A6473"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20 30V10"
+            stroke="#5A6473"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      );
+
+    default:
       return null;
   }
 };
