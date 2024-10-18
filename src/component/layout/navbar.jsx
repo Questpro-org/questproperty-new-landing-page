@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 import { Link, useLocation } from "react-router-dom";
 import Icon from "../../assets/icon";
@@ -34,9 +34,16 @@ function Navbar({ footerRef }) {
     }
   };
 
+  // Close menu on link click (useful for mobile view)
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.classList.remove("no-scroll");
+  };
+
   const scrollToFooter = (e) => {
     e.preventDefault();
     footerRef.current?.scrollIntoView({ behavior: "smooth" });
+    closeMenu(); // Close menu when scrolling to the footer
   };
 
   const routes = [
@@ -65,6 +72,7 @@ function Navbar({ footerRef }) {
               <Link
                 key={route.path}
                 to={route.path}
+                onClick={closeMenu} 
                 className={classNames(
                   "text-[14px] font-bold gap-9 px-2 py-1 hidden md:block w-fit",
                   {
@@ -112,7 +120,9 @@ function Navbar({ footerRef }) {
                     }
                   )}
                 >
-                  <Link to={route.path}>{route.label}</Link>
+                  <Link to={route.path} onClick={closeMenu}>
+                    {route.label}
+                  </Link>
                 </li>
               ))}
               <li className="font-semibold">
@@ -123,7 +133,9 @@ function Navbar({ footerRef }) {
 
           <div className="md:hidden px-5">
             <button className="px-12 rounded-xl bg-[#03B4FF] text-white w-full h-[40px] text-[12px] font-bold">
-              <Link to="/signup">Join Waitlist</Link>
+              <Link to="/signup" onClick={closeMenu}>
+                Join Waitlist
+              </Link>
             </button>
           </div>
         </div>
