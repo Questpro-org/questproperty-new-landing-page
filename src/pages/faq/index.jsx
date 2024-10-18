@@ -79,7 +79,7 @@ function FaqQuestions() {
         <div
           key={question.id}
           onClick={() => handleClick(question.id)}
-          className="flex flex-col gap-4 border-b border-[#D6DDE9] w-1/2 mx-auto bg-opacity-60 py-5 cursor-pointer"
+          className="flex flex-col gap-4 border-b border-[#D6DDE9] lg:w-1/2 lg:mx-auto mx-6 bg-opacity-60 py-5 cursor-pointer"
         >
           <div className="flex justify-between items-center font-medium text-base leading-6 text-black">
             <p className="text-center">{question.question}</p>
