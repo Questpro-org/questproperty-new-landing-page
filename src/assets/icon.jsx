@@ -337,7 +337,7 @@ const Icon = ({ name, className }) => {
     case "supporticon":
       return (
         <svg
-        className={className}
+          className={className}
           width="20"
           height="20"
           viewBox="0 0 20 20"
@@ -371,6 +371,123 @@ const Icon = ({ name, className }) => {
             d="M8.09961 5.19141H12.2663"
             stroke="#000B18"
             stroke-width="1.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      );
+
+    case "exploreicon":
+      return (
+        <svg
+          className={className}
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="32"
+            cy="32"
+            r="31"
+            fill="#E6F8FF"
+            stroke="#E6F8FF"
+            stroke-width="2"
+          />
+          <path
+            d="M28.0003 45.3337H36.0003C42.667 45.3337 45.3337 42.667 45.3337 36.0003V28.0003C45.3337 21.3337 42.667 18.667 36.0003 18.667H28.0003C21.3337 18.667 18.667 21.3337 18.667 28.0003V36.0003C18.667 42.667 21.3337 45.3337 28.0003 45.3337Z"
+            stroke="#03B4FF"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M28.1328 32V30.0267C28.1328 27.48 29.9328 26.4533 32.1328 27.72L33.8395 28.7067L35.5461 29.6933C37.7461 30.96 37.7461 33.04 35.5461 34.3067L33.8395 35.2933L32.1328 36.28C29.9328 37.5467 28.1328 36.5067 28.1328 33.9733V32Z"
+            stroke="#03B4FF"
+            stroke-width="3"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      );
+
+    case "homeicon":
+      return (
+        <svg
+          className={className}
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="32"
+            cy="32"
+            r="31.25"
+            fill="#03B4FF"
+            stroke="#E6F8FF"
+            stroke-width="1.5"
+          />
+          <g clip-path="url(#clip0_208_341)">
+            <path
+              d="M22.6667 32H20L32 20L44 32H41.3333"
+              stroke="#FEFEFE"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M22.667 32V41.3333C22.667 42.0406 22.9479 42.7189 23.448 43.219C23.9481 43.719 24.6264 44 25.3337 44H38.667C39.3742 44 40.0525 43.719 40.5526 43.219C41.0527 42.7189 41.3337 42.0406 41.3337 41.3333V32"
+              stroke="#FEFEFE"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M28 34.0007L30.6667 36.6673L36 31.334"
+              stroke="#FEFEFE"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_208_341">
+              <rect
+                width="32"
+                height="32"
+                fill="white"
+                transform="translate(16 16)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      );
+
+    case "plusicon":
+      return (
+        <svg
+          className={className}
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 20H30"
+            stroke="#5A6473"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20 30V10"
+            stroke="#5A6473"
+            stroke-width="1.5"
             stroke-linecap="round"
             stroke-linejoin="round"
           />

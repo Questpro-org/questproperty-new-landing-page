@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/questpro.svg";
 import Icon from "../../assets/icon";
 
-const Footer = () => {
-  return (
-    <div className="mt-[70px] text-[#290202] bg-[#56CDFF]">
+const Footer = React.forwardRef((props, ref) => (
+    <footer ref={ref} className="mt-[70px] max-w-screen-xl mx-auto text-[#290202] bg-[#56CDFF]">
       <div className="w-[94%] mx-auto pt-7">
         <div className="md:lg:col-span-2 ml-6 md:col-span-1 md:hidden">
           <img src={Logo} alt="logo" />
@@ -131,7 +130,7 @@ const Footer = () => {
               </li>
               <li className="flex gap-3">
                 {" "}
-                <Icon name="supporticon" /> Support@questpro.ng
+                <Icon name="supporticon" /> hello@questpro.ng
               </li>
             </ul>
           </div>
@@ -145,8 +144,8 @@ const Footer = () => {
           reserved
         </p>
       </div>
-    </div>
-  );
-};
+    </footer>
+  ));
+
 
 export default Footer;

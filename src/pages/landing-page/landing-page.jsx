@@ -8,14 +8,14 @@ import JoinWaitlist from "../../component/landing-page/join-waitlist";
 
 function LandingPage() {
   return (
-    <>
+    <div className="max-w-screen-xl mx-auto">
       <BannerSection />
       <PremierEstate />
       <KeyFeatures />
       <WhyQuestpro />
       <WhyUs />
       <JoinWaitlist />
-    </>
+    </div>
   );
 }
 

@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
-import Banner1 from "../../assets/images/banner1.svg";
-import Banner2 from "../../assets/images/banner2.svg";
-import Banner3 from "../../assets/images/banner3.svg";
+import Banner1 from "../../assets/images/banner1.png";
+import Banner2 from "../../assets/images/banner2.png";
+import Banner3 from "../../assets/images/banner3.png";
 import Icon from "../../assets/icon";
 
 const bannerData = [
   {
-    image: Banner2,
+    image: Banner1,
     text: " Your Ultimate Destination For",
     highlightedText: " Real Estate Excellence",
     activeOptionIndex: 0,
   },
   {
-    image: Banner3,
+    image: Banner2,
     text: "Your Ideal Shortlet Solution",
     highlightedText1: "Short Term Luxury: ",
     activeOptionIndex: 1,
   },
   {
-    image: Banner1,
+    image: Banner3,
     text: " Tailored To Your Lifestyle",
     highlightedText1: " Discover Rental Options",
     activeOptionIndex: 2,
@@ -46,10 +46,9 @@ function BannerSection() {
       className="relative lg:h-[120vh] h-screen bg-cover bg-center transition-all duration-500 ease-in-out border-0 rounded-br-[100px]"
       style={{ backgroundImage: `url(${image})` }}
     >
-      {/* Content */}
       <div className="absolute inset-0 flex flex-col justify-center text-white lg:px-14 px-7 bg-black bg-opacity-50 rounded-br-[100px]">
-        <div className="lg:w-[65%] w-full ">
-          {/* Heading with dynamic color */}
+        <div className="lg:w-[70%] w-full ">
+        
           <h1 className="text-4xl md:text-[60px] font-semibold mb-4 lg:leading-[60px] leading-[40px] text-24px lg:mt-0">
           <span className="text-[#03B4FF]">{highlightedText1}</span>
             {text}
@@ -76,11 +75,10 @@ function BannerSection() {
             ))}
           </div>
 
-          {/* Search Box */}
-          <div className="flex md:gap-4 gap-1  bg-white bg-opacity-90 p-4 lg:h-[100px] h-[44px] rounded-lg items-center lg:w-full w-[279px]">
+          <div className="flex md:gap-4 gap-1  bg-white bg-opacity-90 p-4 lg:h-[100px] rounded-lg items-center lg:w-full w-[279px]">
             <div className="flex flex-col lg:border-r-2 lg:border-[#fff]">
               <label className="text-[12px] text-black font-semibold mb-1">
-                Location, 
+                Location
               </label>
               <input
                 type="text"
@@ -90,7 +88,7 @@ function BannerSection() {
             </div>
             <div className="flex flex-col lg:border-r-2 lg:border-[#fff]">
               <label className="text-[12px] font-semibold text-black mb-1">
-                Property Type, 
+                Property & <span className="hidden lg:inline">Type</span>
               </label>
               <input
                 type="text"
@@ -100,7 +98,7 @@ function BannerSection() {
             </div>
             <div className="flex flex-col lg:border-r-2 lg:border-[#fff]">
               <label className="text-[12px] text-black font-semibold mb-1">
-                Price Range, 
+                Price Range
               </label>
               <input
                 type="text"
@@ -108,7 +106,7 @@ function BannerSection() {
                 className="lg:inline-block hidden px-4 py-2 rounded-lg text-[#666668] border-gray-300 bg-transparent outline-none border-none "
               />
             </div>
-            <button className="bg-[#03B4FF] text-white lg:w-[80px] h-[30px] w-[30px] rounded-lg lg:rounded-lg">
+            <button className="bg-[#03B4FF] text-white p-3 rounded-2xl">
               <Icon name="searchicon" />
             </button>
           </div>
