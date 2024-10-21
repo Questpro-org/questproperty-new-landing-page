@@ -93,8 +93,8 @@ function Navbar({ footerRef }) {
             </button>
           </div>
 
-          <Link to="/signup" className="hidden md:block">
-            <button className="px-12 rounded-xl bg-[#03B4FF] text-white h-[40px] text-[12px] font-bold">
+          <Link to="https://t.me/+dnHc3oBDisg4NGE0"   rel="noopener noreferrer" target="__blank" className="hidden md:block">
+            <button className="px-12 rounded-xl bg-[#03B4FF] hover:opacity-50 text-white h-[40px] text-[12px] font-bold">
               Join Waitlist
             </button>
           </Link>
@@ -133,7 +133,7 @@ function Navbar({ footerRef }) {
 
           <div className="md:hidden px-5">
             <button className="px-12 rounded-xl bg-[#03B4FF] text-white w-full h-[40px] text-[12px] font-bold">
-              <Link to="/signup" onClick={closeMenu}>
+              <Link to="https://t.me/+dnHc3oBDisg4NGE0"   rel="noopener noreferrer" target="__blank" onClick={closeMenu}>
                 Join Waitlist
               </Link>
             </button>

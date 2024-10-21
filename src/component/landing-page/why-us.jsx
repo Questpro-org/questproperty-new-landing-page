@@ -1,37 +1,39 @@
 import React from "react";
-import Agent1 from "../../assets/images/agent1.svg";
-import Agent2 from "../../assets/images/agent2.svg";
-import Agent3 from "../../assets/images/agent3.svg";
+import AgentAvatar from "../../assets/images/avatar.webp";
 import BarCode from "../../assets/images/barcode.svg";
 import Flat from "../../assets/images/flat.png";
 import Icon from "../../assets/icon";
+import { Link } from "react-router-dom";
+import { QRCodeCanvas } from "qrcode.react";
 
 const testimonials = [
   {
-    image: Agent1,
+    image: AgentAvatar,
     quote:
       "QuestProperty has transformed the way I manage my listings. The user-friendly interface and powerful tools make it easy to attract and connect with potential buyers. It’s a game-changer for my business!",
-    name: "Olawale Jordan",
+    name: "Agent Dipo",
     role: "Agent",
     stars: 5,
   },
   {
-    image: Agent2,
+    image: AgentAvatar,
     quote:
       "Since I started using QuestProperty, my workflow has become so much more efficient. The platform’s advanced search features and comprehensive analytics help me stay ahead in a competitive market.",
-    name: "Chike Williams",
+    name: "Agent Wike",
     role: "Agent",
     stars: 5,
   },
   {
-    image: Agent3,
+    image: AgentAvatar,
     quote:
       "As a property manager, efficiency is key, and QuestProperty delivers on every front. The platform’s advanced search and listing features have streamlined my workflow, allowing me to focus more on my clients.",
-    name: "Sandra Orlu",
+    name: "Agent Orlu",
     role: "Agent",
     stars: 5,
   },
 ];
+
+const url = "https://t.me/+dnHc3oBDisg4NGE0";
 
 function WhyUs() {
   return (
@@ -56,7 +58,11 @@ function WhyUs() {
             <hr className="bg-black" />
             <div className="flex items-center justify-between mt-5">
               <div className="flex gap-3">
-                <img src={testimonial?.image} alt="pics" />
+                <img
+                  src={testimonial?.image}
+                  alt="pics"
+                  className="w-[40px] rounded-full"
+                />
                 <div>
                   <p className="text-[#000B18] font-medium text-[14px] md:text-[16px]">
                     {testimonial?.name}
@@ -82,23 +88,29 @@ function WhyUs() {
 
       <div className="bg-[#FFF] mt-28 py-10 lg:px-16 px-6 mx-auto">
         <div className="bg-[#8BDDFF] rounded-2xl lg:flex p-8">
-        <img src={Flat} alt="flat" className=" lg:hidden" />
+          <img src={Flat} alt="flat" className=" lg:hidden" />
           <div>
             <h1 className="text-[#000B18] font-semibold text-[20px] lg:text-[48px]">
               Download QuestProperty App to Explore, Connect and Elevate Your
               Real Estate Experience.
             </h1>
             <section className="flex gap-3 mt-10">
-              <img src={BarCode} alt="barcode" />
+              <QRCodeCanvas
+                value={url}
+                size={120}
+                bgColor={"#ffffff"}
+                fgColor={"#000000"}
+                level={"H"}
+                includeMargin={true}
+                className="rounded-2xl"
+              />
               <Icon name="googleicon" className="mt-10" />
               <Icon name="appleicon" className="mt-10" />
             </section>
           </div>
           <img src={Flat} alt="flat" className="hidden lg:inline-block" />
         </div>
-      
       </div>
-     
     </div>
   );
 }
