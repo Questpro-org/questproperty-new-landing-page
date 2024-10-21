@@ -45,7 +45,6 @@ function WhyUs() {
         customers and agents
       </p>
 
-      {/* Mapping over testimonials */}
       <div className="grid grid-cols-1 gap-8 md:grid-cols-3 px-6 max-w-6xl mt-5 mx-auto md:mt-12">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-white shadow-md p-6 rounded-xl">
