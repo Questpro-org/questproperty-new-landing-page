@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import Icon from "../../assets/icon";
 import Logo from "../../assets/images/questlogo.svg";
 
-function Navbar() {
+function Navbar({ footerRef }) {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -18,10 +18,10 @@ function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [scrolled]);
 
@@ -34,20 +34,33 @@ function Navbar() {
     }
   };
 
+  // Close menu on link click (useful for mobile view)
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    document.body.classList.remove("no-scroll");
+  };
+
+  const scrollToFooter = (e) => {
+    e.preventDefault();
+    footerRef.current?.scrollIntoView({ behavior: "smooth" });
+    closeMenu(); // Close menu when scrolling to the footer
+  };
+
   const routes = [
     { path: "/", label: "Home" },
-    { path: "/about", label: "About Us" },
-    { path: "/contact", label: "Contact" },
+    { path: "/about-us", label: "About Us" },
     { path: "/faqs", label: "FAQs" },
   ];
 
   return (
-    <div className={classNames(
-      "fixed top-0 left-0 right-0 bg-[#fff] h-[88.5px] shadow-md shadow-[#DCDEE180] transition-all duration-300 z-50",
-      {
-        "b bg-opacity-70": scrolled
-      }
-    )}>
+    <div
+      className={classNames(
+        "fixed top-0 left-0 right-0 bg-[#fff] h-[88.5px] shadow-md shadow-[#DCDEE180] transition-all duration-300 z-50",
+        {
+          "b bg-opacity-70": scrolled,
+        }
+      )}
+    >
       <div className="max-w-screen-xl mx-auto md:py-6 py-3 md:px-14 px-4 relative">
         <div className="flex justify-between items-center cursor-pointer">
           <Link to="/" className="w-[300px] md:w-[180px] h-[10px] md:h-[15px]">
@@ -59,6 +72,7 @@ function Navbar() {
               <Link
                 key={route.path}
                 to={route.path}
+                onClick={closeMenu} 
                 className={classNames(
                   "text-[14px] font-bold gap-9 px-2 py-1 hidden md:block w-fit",
                   {
@@ -70,10 +84,17 @@ function Navbar() {
                 <button>{route.label}</button>
               </Link>
             ))}
+
+            <button
+              onClick={scrollToFooter}
+              className="text-[14px] font-bold gap-9 px-2 py-1 hidden md:block w-fit text-[#000] rounded-2xl"
+            >
+              Contact
+            </button>
           </div>
 
-          <Link to="/signup" className="hidden md:block">
-            <button className="px-12 rounded-xl bg-[#03B4FF] text-white h-[40px] text-[12px] font-bold">
+          <Link to="https://t.me/+dnHc3oBDisg4NGE0"   rel="noopener noreferrer" target="__blank" className="hidden md:block">
+            <button className="px-12 rounded-xl bg-[#03B4FF] hover:opacity-50 text-white h-[40px] text-[12px] font-bold">
               Join Waitlist
             </button>
           </Link>
@@ -99,15 +120,22 @@ function Navbar() {
                     }
                   )}
                 >
-                  <Link to={route.path}>{route.label}</Link>
+                  <Link to={route.path} onClick={closeMenu}>
+                    {route.label}
+                  </Link>
                 </li>
               ))}
+              <li className="font-semibold">
+                <button onClick={scrollToFooter}>Contact</button>
+              </li>
             </ul>
           </div>
 
           <div className="md:hidden px-5">
             <button className="px-12 rounded-xl bg-[#03B4FF] text-white w-full h-[40px] text-[12px] font-bold">
-              <Link to="/signup">Join Waitlist</Link>
+              <Link to="https://t.me/+dnHc3oBDisg4NGE0"   rel="noopener noreferrer" target="__blank" onClick={closeMenu}>
+                Join Waitlist
+              </Link>
             </button>
           </div>
         </div>

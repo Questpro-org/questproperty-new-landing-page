@@ -1,24 +1,14 @@
 import React from "react";
-import Blue from "../../assets/images/blue.svg";
-import Mansion from "../../assets/images/mansion.svg";
-import White from "../../assets/images/white.svg";
-import Rivers from "../../assets/images/Rivers.svg";
-import Enugu from "../../assets/images/enugu.svg";
-import Abuja from "../../assets/images/Abuja.svg";
-import Gbagada from "../../assets/images/gbagada.svg";
-import Ajah from "../../assets/images/Ajah.svg";
+import Blue from "../../assets/images/blue.png";
+import Mansion from "../../assets/images/mansion.png";
+import White from "../../assets/images/white.png";
+import Rivers from "../../assets/images/Rivers.png";
+import Enugu from "../../assets/images/enugu.png";
+import Abuja from "../../assets/images/Abuja.png";
+import Gbagada from "../../assets/images/gbagada.png";
+import Ajah from "../../assets/images/Ajah.png";
 
 function KeyFeatures() {
-  const locations1 = [
-    { name: "Rivers", imgSrc: Rivers },
-    { name: "Enugu", imgSrc: Enugu },
-    { name: "Abuja", imgSrc: Abuja },
-  ];
-
-  const locations2 = [
-    { name: "Gbagada", imgSrc: Gbagada },
-    { name: "Ajah", imgSrc: Ajah },
-  ];
   return (
     <>
       <h3 className="lg:text-[32px] text-[18px] font-bold text-[#262626] text-center mt-16">
@@ -133,6 +123,12 @@ function KeyFeatures() {
         alt={"Rivers"}
         className="mt-5 px-6 lg:hidden  hover:opacity-40 cursor-pointer"
       />
+
+      <div className="flex justify-center">
+        <button className="w-[142px] h-[46px] bg-[#03B4FF] text-white hover:opacity-50 rounded-lg mt-10">
+          View All
+        </button>
+      </div>
     </>
   );
 }
