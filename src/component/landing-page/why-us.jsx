@@ -1,9 +1,7 @@
 import React from "react";
 import AgentAvatar from "../../assets/images/avatar.webp";
-import BarCode from "../../assets/images/barcode.svg";
 import Flat from "../../assets/images/flat.png";
 import Icon from "../../assets/icon";
-import { Link } from "react-router-dom";
 import { QRCodeCanvas } from "qrcode.react";
 
 const testimonials = [
