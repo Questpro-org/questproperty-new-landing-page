@@ -2,11 +2,10 @@ import React from "react";
 import Blue from "../../assets/images/blue.png";
 import Mansion from "../../assets/images/mansion.png";
 import White from "../../assets/images/white.png";
-import Rivers from "../../assets/images/Rivers.png";
-import Enugu from "../../assets/images/enugu.png";
-import Abuja from "../../assets/images/Abuja.png";
-import Gbagada from "../../assets/images/gbagada.png";
-import Ajah from "../../assets/images/Ajah.png";
+import Rivers from "../../assets/images/Rivers.jpg";
+import Enugu from "../../assets/images/Enugu.jpg";
+import Abuja from "../../assets/images/Abuja.jpg";
+import Lagos from "../../assets/images/Lagos.jpg";
 
 function KeyFeatures() {
   return (
@@ -64,65 +63,51 @@ function KeyFeatures() {
         Check out some of the finest listings handpicked just for you
       </p>
 
-      <div className="lg:flex hidden gap-16 p-14 ">
-        <img
-          src={Rivers}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-        <img
-          src={Enugu}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-        <img
-          src={Abuja}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-      </div>
+      <div className="lg:grid lg:grid-cols-4 grid grid-cols-1 lg:gap-16 gap-5 p-8">
+        <div className="relative">
+          <img
+            src={Rivers}
+            alt="Rivers"
+            className="hover:opacity-40 cursor-pointer h-[320px] w-full rounded-xl"
+          />
+          <span className="absolute bottom-3 left-3 text-white text-lg font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">
+            Rivers
+          </span>
+        </div>
 
-      <div className="lg:flex hidden gap-16  px-14">
-        <img
-          src={Gbagada}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-        <img
-          src={Ajah}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-      </div>
+        <div className="relative">
+          <img
+            src={Enugu}
+            alt="Enugu"
+            className="hover:opacity-40 cursor-pointer h-[320px] w-full rounded-xl"
+          />
+          <span className="absolute bottom-3 left-3 text-white text-lg font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">
+            Enugu
+          </span>
+        </div>
 
-      <div className="lg:hidden grid grid-cols-2 mt-5 gap-4 px-6">
-        <img
-          src={Rivers}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-        <img
-          src={Enugu}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-        <img
-          src={Abuja}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-        <img
-          src={Gbagada}
-          alt={"Rivers"}
-          className="h hover:opacity-40 cursor-pointer"
-        />
-      </div>
+        <div className="relative">
+          <img
+            src={Abuja}
+            alt="Abuja"
+            className="hover:opacity-40 cursor-pointer h-[320px] w-full rounded-xl"
+          />
+          <span className="absolute bottom-3 left-3 text-white text-lg font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">
+            Abuja
+          </span>
+        </div>
 
-      <img
-        src={Ajah}
-        alt={"Rivers"}
-        className="mt-5 px-6 lg:hidden  hover:opacity-40 cursor-pointer"
-      />
+        <div className="relative">
+          <img
+            src={Lagos}
+            alt="Lagos"
+            className="hover:opacity-40 cursor-pointer h-[320px] w-full rounded-xl"
+          />
+          <span className="absolute bottom-3 left-3 text-white text-lg font-semibold bg-black bg-opacity-50 px-2 py-1 rounded">
+            Lagos
+          </span>
+        </div>
+      </div>
 
       <div className="flex justify-center">
         <button className="w-[142px] h-[46px] bg-[#03B4FF] text-white hover:opacity-50 rounded-lg mt-10">
