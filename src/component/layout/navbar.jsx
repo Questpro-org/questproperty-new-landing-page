@@ -34,7 +34,6 @@ function Navbar({ footerRef }) {
     }
   };
 
-  // Close menu on link click (useful for mobile view)
   const closeMenu = () => {
     setIsMenuOpen(false);
     document.body.classList.remove("no-scroll");
@@ -43,13 +42,15 @@ function Navbar({ footerRef }) {
   const scrollToFooter = (e) => {
     e.preventDefault();
     footerRef.current?.scrollIntoView({ behavior: "smooth" });
-    closeMenu(); // Close menu when scrolling to the footer
+    closeMenu();
   };
 
   const routes = [
     { path: "/", label: "Home" },
     { path: "/about-us", label: "About Us" },
     { path: "/faqs", label: "FAQs" },
+    { path: "/terms", label: "Terms & Condition"},
+    { path: "/verification", label: "Verification"},
   ];
 
   return (
