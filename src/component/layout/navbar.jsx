@@ -49,8 +49,8 @@ function Navbar({ footerRef }) {
     { path: "/", label: "Home" },
     { path: "/about-us", label: "About Us" },
     { path: "/faqs", label: "FAQs" },
-    { path: "/terms", label: "Terms & Condition"},
-    { path: "/verification", label: "Verification"},
+    { path: "/terms", label: "Terms & Condition", desktopOnly: true },
+    { path: "/verification", label: "Verification", desktopOnly: true },
   ];
 
   return (
@@ -58,7 +58,7 @@ function Navbar({ footerRef }) {
       className={classNames(
         "fixed top-0 left-0 right-0 bg-[#fff] h-[88.5px] shadow-md shadow-[#DCDEE180] transition-all duration-300 z-50",
         {
-          "b bg-opacity-70": scrolled,
+          "bg-opacity-70": scrolled,
         }
       )}
     >
@@ -69,22 +69,25 @@ function Navbar({ footerRef }) {
           </Link>
 
           <div className="flex gap-8 text-[16px] h-[30px] justify-end">
-            {routes.map((route) => (
-              <Link
-                key={route.path}
-                to={route.path}
-                onClick={closeMenu} 
-                className={classNames(
-                  "text-[14px] font-bold gap-9 px-2 py-1 hidden md:block w-fit",
-                  {
-                    "text-[#fff] bg-[#03B4FF] rounded-2xl":
-                      location.pathname === route.path,
-                  }
-                )}
-              >
-                <button>{route.label}</button>
-              </Link>
-            ))}
+            {routes.map(
+              (route) =>
+                (!route.desktopOnly || isMenuOpen) && (
+                  <Link
+                    key={route.path}
+                    to={route.path}
+                    onClick={closeMenu}
+                    className={classNames(
+                      "text-[14px] font-bold gap-9 px-2 py-1 hidden md:block w-fit",
+                      {
+                        "text-[#fff] bg-[#03B4FF] rounded-2xl":
+                          location.pathname === route.path,
+                      }
+                    )}
+                  >
+                    <button>{route.label}</button>
+                  </Link>
+                )
+            )}
 
             <button
               onClick={scrollToFooter}
@@ -94,7 +97,12 @@ function Navbar({ footerRef }) {
             </button>
           </div>
 
-          <Link to="https://t.me/+dnHc3oBDisg4NGE0"   rel="noopener noreferrer" target="__blank" className="hidden md:block">
+          <Link
+            to="https://t.me/+dnHc3oBDisg4NGE0"
+            rel="noopener noreferrer"
+            target="__blank"
+            className="hidden md:block"
+          >
             <button className="px-12 rounded-xl bg-[#03B4FF] hover:opacity-50 text-white h-[40px] text-[12px] font-bold">
               Join Waitlist
             </button>
@@ -108,8 +116,8 @@ function Navbar({ footerRef }) {
 
       {isMenuOpen && (
         <div className="md:relative md:max-w-[100%] md:[600px] ml-auto inset-0 z-50 justify-center">
-          <div className="relative top-[263px] z-50 md:top-[75px] md:w-full left-1/2 w-[100%] bg-[#F8F8F8] transform -translate-x-1/2 -translate-y-1/2 pt-8 rounded-md">
-            <ul className="flex flex-col gap-3  leading-[60px] text-[20px] px-7 md:text-[26px] h-[450px] text-left text-[#040821] font-semibold">
+          <div className="relative top-[328px] z-50 md:top-[75px] md:w-full left-1/2 w-[100%] bg-[#F8F8F8] h-fit transform -translate-x-1/2 -translate-y-1/2 pt-8 rounded-md">
+            <ul className="flex flex-col gap-3  leading-[60px] text-[20px] px-7 md:text-[26px] h-[580px] text-left text-[#040821] font-semibold">
               {routes.map((route) => (
                 <li
                   key={route.path}
@@ -134,7 +142,12 @@ function Navbar({ footerRef }) {
 
           <div className="md:hidden px-5">
             <button className="px-12 rounded-xl bg-[#03B4FF] text-white w-full h-[40px] text-[12px] font-bold">
-              <Link to="https://t.me/+dnHc3oBDisg4NGE0"   rel="noopener noreferrer" target="__blank" onClick={closeMenu}>
+              <Link
+                to="https://t.me/+dnHc3oBDisg4NGE0"
+                rel="noopener noreferrer"
+                target="__blank"
+                onClick={closeMenu}
+              >
                 Join Waitlist
               </Link>
             </button>
