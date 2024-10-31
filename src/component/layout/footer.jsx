@@ -17,7 +17,7 @@ const Footer = React.forwardRef((props, ref) => (
         </p>
         <section className="flex md:gap-5 gap-2 mt-2">
           <Link
-            to="https://x.com/vendstash?s=20"
+            to="https://x.com/questpropertya/status/1842191955414884762?s=46"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -25,7 +25,7 @@ const Footer = React.forwardRef((props, ref) => (
           </Link>
 
           <Link
-            to="https://web.facebook.com/people/Vendstash/61554099410029/"
+            to="https://www.facebook.com/profile.php?id=61565830982124&mibextid=LQQJ4d"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -33,7 +33,7 @@ const Footer = React.forwardRef((props, ref) => (
           </Link>
 
           <Link
-            to="https://www.instagram.com/vendstash_/"
+           to="https://www.instagram.com/questpropertyafrica/profilecard/?igsh=bmhoYnZrd202M2hp"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -41,7 +41,7 @@ const Footer = React.forwardRef((props, ref) => (
           </Link>
 
           <Link
-            to="https://www.linkedin.com/company/vendstash/"
+            to="https://www.linkedin.com/company/questpro-technology/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -68,7 +68,7 @@ const Footer = React.forwardRef((props, ref) => (
             </Link>
 
             <Link
-              to="https://web.facebook.com/people/Vendstash/61554099410029/"
+              to="https://www.facebook.com/profile.php?id=61565830982124&mibextid=LQQJ4d"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -97,24 +97,23 @@ const Footer = React.forwardRef((props, ref) => (
           <h3 className="text-[16px] font-bold">Company</h3>
           <ul className="mt-4 text-[14px] font-medium leading-8">
             <li>
-              <Link to="/#about"> About</Link>
+              <Link to="/about-us"> About</Link>
+            </li>
+           
+            <li>
+              <Link to="/verification">Verification</Link>
             </li>
             <li>
-              <Link to="/#career">Career</Link>
+              <Link to="/terms">Terms & Conditions</Link>
             </li>
             <li>
-              <Link to="/#agent">Agents</Link>
+              <Link to="/faqs">FAQS</Link>
             </li>
-            <li>
-              <Link to="/#pricing">Pricing</Link>
-            </li>
-            <li>
-              <Link to="/#contact-us">Contact Us</Link>
-            </li>
+           
           </ul>
         </div>
         <div className="col-span-1 md:mt-0 mt-9">
-          <h3 className="text-[16px] font-bold">Services</h3>
+          <h3 className="text-[16px] font-bold">Legal</h3>
           <ul className="mt-4 text-[14px] font-medium leading-8">
             <li>Shortlet Apartment</li>
             <li>Property For Sale</li>
@@ -138,8 +137,6 @@ const Footer = React.forwardRef((props, ref) => (
       </section>
 
       <hr className="mt-12" />
-      {/* <img src={Logo} alt="logo" className="md:hidden mt-8" /> */}
-
       <p className="md:text-[16px] text-center text-[10px] font-medium py-8">
         Copyright © {new Date().getFullYear()} Questpro Technology. All rights
         reserved
