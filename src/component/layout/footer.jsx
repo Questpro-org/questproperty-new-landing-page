@@ -126,19 +126,16 @@ const Footer = React.forwardRef((props, ref) => (
           <ul className="mt-4 text-[14px] font-medium leading-8">
             <li className="flex gap-3">
               {" "}
-              <Icon name="supporticon" /> Support@questpro.ng
+              <Icon name="supporticon" /> support@questproperty.africa
             </li>
-            <li className="flex gap-3">
-              {" "}
-              <Icon name="supporticon" /> hello@questpro.ng
-            </li>
+            
           </ul>
         </div>
       </section>
 
       <hr className="mt-12" />
       <p className="md:text-[16px] text-center text-[10px] font-medium py-8">
-        Copyright © {new Date().getFullYear()} Questpro Technology. All rights
+        Copyright © {new Date().getFullYear()} Questproperty Africa. All rights
         reserved
       </p>
     </div>

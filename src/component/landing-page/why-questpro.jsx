@@ -9,7 +9,7 @@ const WhyQuestProperty = () => {
     {
       icon: Marked,
       title: "Verified Listings",
-      description: "At Quest Properties, all agents undergo a rigorous verification process to mitigate the risk of fraud and provide peace of mind to property seekers. Our verification protocols ensure that each agent's identity is authenticated, enhancing transparency and authenticity in property listings.",
+      description: "At Questproperty Africa, all agents undergo a rigorous verification process to mitigate the risk of fraud and provide peace of mind to property seekers. Our verification protocols ensure that each agent's identity is authenticated, enhancing transparency and authenticity in property listings.",
     },
     {
       icon: Padlock,

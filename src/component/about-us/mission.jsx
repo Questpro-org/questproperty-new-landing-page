@@ -9,7 +9,7 @@ function Mission() {
         <section>
           <h1 className="text-[#000B18] text-[20px] lg:text-[32px] lg:mt-0 mt-10">Our Mission</h1>
           <p className="text-[16px] lg:text-[18px] text-[#666668]">
-            Our mission at Quest Properties is to revolutionize the real estate
+            Our mission at Questproperty Africa is to revolutionize the real estate
             experience by providing unparalleled service, innovative technology,
             and a deep commitment to our clients. We strive to be the trusted
             partner for all your property needs, offering expert guidance and
