@@ -21,7 +21,7 @@ function PremierEstate() {
             Africa’s Premier Real Estate Marketplace
           </h1>
           <p className="md:text-[18px] text-[16px] text-[#666668]">
-            Quest Properties Nigeria is Africa’s premier real estate
+          Questproperty Africa Nigeria is Africa’s premier real estate
             marketplace, boasting a network of over 3,000 active agents and
             serving a community of 10,000 house seekers. Our platform is
             designed to harness cutting-edge technology, ensuring secure
