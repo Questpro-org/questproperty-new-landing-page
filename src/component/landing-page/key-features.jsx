@@ -22,7 +22,7 @@ function KeyFeatures() {
         <h1 className="text-[#262626] font-bold text-[20px] lg:text-[32px] mt-10 lg:mt-[170px]">
           Chat with verified Agent
           <span className="text-[16px] lg:text-[18px] block font-normal text-[#666668]">
-            Quest Properties facilitates direct communication with verified
+          Questproperty Africa facilitates direct communication with verified
             agents, ensuring transparency and trust in every interaction. With a
             vast network of over 3,000 verified agents, seekers can engage with
             professionals who meet their specific needs, eliminating the risk of
