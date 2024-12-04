@@ -53,7 +53,7 @@ const Footer = React.forwardRef((props, ref) => (
         <div className="md:block md:lg:col-span-2 md:col-span-1 hidden">
           <img src={Logo} alt="logo" />
           <h1 className="text-[#290202] text-[24px] font-bold">
-            Questproperty
+          Questproperty Africa
           </h1>
           <p className="text-[16px] font-medium mr-3 mt-3">
             Africa’s premier real estate market <br /> place
