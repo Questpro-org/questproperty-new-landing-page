@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/questpro.svg";
 import Icon from "../../assets/icon";
 
-const Footer = React.forwardRef((props, ref) => (
+const Footer = React.forwardRef((ref) => (
   <footer
     ref={ref}
     className="mt-[70px] max-w-screen-xl mx-auto text-[#290202] bg-[#56CDFF]"
