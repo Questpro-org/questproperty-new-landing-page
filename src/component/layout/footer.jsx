@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/images/questpro.svg";
 import Icon from "../../assets/icon";
 
-const Footer = React.forwardRef((props, ref) => (
+const Footer = React.forwardRef((ref) => (
   <footer
     ref={ref}
     className="mt-[70px] max-w-screen-xl mx-auto text-[#290202] bg-[#56CDFF]"
@@ -53,7 +53,7 @@ const Footer = React.forwardRef((props, ref) => (
         <div className="md:block md:lg:col-span-2 md:col-span-1 hidden">
           <img src={Logo} alt="logo" />
           <h1 className="text-[#290202] text-[24px] font-bold">
-            Questproperty
+          Questproperty Africa
           </h1>
           <p className="text-[16px] font-medium mr-3 mt-3">
             Africa’s premier real estate market <br /> place
